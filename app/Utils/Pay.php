@@ -31,7 +31,7 @@ class Pay
     {
         return '
 						<form action="/user/alipay" method="get" target="_blank" >
-							<h3>支付宝充值</h3>
+							<h3>2.支付宝充值</h3>
 							<p>充值金额: <input type="text" name="amount" /></p>
 							<input type="submit" value="提交" />
 						</form>
