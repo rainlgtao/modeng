@@ -20,6 +20,7 @@
 					<div class="card-main">
 						<div class="card-inner">
 							<p>系统中金额流转记录。</p>
+							<p>总收入：{$total_in} 元</p>
 							<p>显示表项:
 								{include file='table/checkbox.tpl'}
 							</p>
