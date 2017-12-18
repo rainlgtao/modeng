@@ -20,7 +20,6 @@
 					<div class="card-main">
 						<div class="card-inner">
 							<p>系统中金额流转记录。</p>
-							<p>总收入：{$total_in} 元</p>
 							<p>显示表项:
 								{include file='table/checkbox.tpl'}
 							</p>
@@ -72,32 +71,4 @@
 $(document).ready(function(){
 	{include file='table/js_2.tpl'}
 });
-</script>
-
-<script>
-    $(document).ready(function () {
-        $("#hide-update").click(function () {
-            $.ajax({
-                type: "POST",
-                url: "hide",
-                dataType: "json",
-                data: {
-                    hide: $("#hide").val()
-                },
-                success: function (data) {
-                    if (data.ret) {
-                        $("#result").modal();
-						$("#msg").html(data.msg);
-                    } else {
-                        $("#result").modal();
-						$("#msg").html(data.msg);
-                    }
-                },
-                error: function (jqXHR) {
-                    $("#result").modal();
-					$("#msg").html(data.msg+"     出现了一些错误。");
-                }
-            })
-        })
-    })
 </script>
