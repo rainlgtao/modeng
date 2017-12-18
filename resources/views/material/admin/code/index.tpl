@@ -73,3 +73,31 @@ $(document).ready(function(){
 	{include file='table/js_2.tpl'}
 });
 </script>
+
+<script>
+    $(document).ready(function () {
+        $("#hide-update").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "hide",
+                dataType: "json",
+                data: {
+                    hide: $("#hide").val()
+                },
+                success: function (data) {
+                    if (data.ret) {
+                        $("#result").modal();
+						$("#msg").html(data.msg);
+                    } else {
+                        $("#result").modal();
+						$("#msg").html(data.msg);
+                    }
+                },
+                error: function (jqXHR) {
+                    $("#result").modal();
+					$("#msg").html(data.msg+"     出现了一些错误。");
+                }
+            })
+        })
+    })
+</script>
